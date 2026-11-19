@@ -1,0 +1,17 @@
+# Pinned to the versions verified by the full pipeline run on 2026-11-19
+# (Python 3.12). Looser ranges work in principle, but these exact pins are
+# what the results in the README were produced with.
+pandas==3.1.1
+numpy==2.5.5
+scipy==1.18.1
+scikit-learn==1.9.1
+statsmodels==0.15.0
+duckdb==2.0.0
+plotly==7.1.0
+mlflow==3.18.0
+openpyxl==3.1.5
+
+# XGBoost 3.x pulls a ~200 MB NVIDIA NCCL wheel (nvidia-nccl-cu13) that
+# fails to download on restricted networks; 2.1.4 has no such dependency
+# and is fully sufficient for this tabular task.
+xgboost==2.1.4
